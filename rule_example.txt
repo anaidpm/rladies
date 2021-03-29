@@ -2,5 +2,6 @@ function (user, context, callback) {
   var namespace = "https://rladies.org/";
   user.user_metadata = user.user_metadata || {};
   context.idToken[namespace + "user_metadata"] = user.user_metadata; 
+  context.idToken[namespace + "app_metadata"] = user.app_metadata; 
   callback(null, user, context);
 }
